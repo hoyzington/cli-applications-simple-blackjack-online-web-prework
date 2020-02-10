@@ -16,10 +16,13 @@ end
 
 def initial_round
   cards = []
+#  print "Your cards are: "
   2.times do 
     card = deal_card
+#    print "#{card} "
     cards << card
   end
+#  puts " "
   sum = cards.reduce(:+)
   display_card_total(sum)
   sum
@@ -47,6 +50,7 @@ def hit?(num)
     input = get_user_input
     if input == "h"
       card = deal_card
+#      puts "Your new card is #{card}"
       sum = card + num
       return sum
     elsif input == "s"
